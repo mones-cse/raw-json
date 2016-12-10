@@ -11,7 +11,7 @@ d3.geo.zoom = function() {
   var projection,
       zoomPoint,
       event = d3.dispatch("zoomstart", "zoom", "zoomend"),
-      zoom = d3.behavior.zoom()
+      zoom = d3.zoom()
         .on("zoomstart", function() {
           var mouse0 = d3.mouse(this),
               rotate = quaternionFromEuler(projection.rotate()),
